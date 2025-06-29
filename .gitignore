@@ -64,3 +64,23 @@ typings/
 /tmp/uploads
 
 *credentials*.json
+
+# Security - Never commit these
+.env
+.env.local
+.env.production
+.env.*
+!.env.example
+admin-token.txt
+*-token.txt
+*.key
+*.pem
+
+# reference implementation files
+main.py
+task.md
+CLAUDE.md
+summer.md
+debug-calendar.js
+test-implementation.js
+coding.xml

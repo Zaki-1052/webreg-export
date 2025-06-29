@@ -13,12 +13,16 @@ const helmet = require('helmet');
 require('dotenv').config()
 
 const indexRouter = require('./routes/index');
+const { validateAdminSecurity } = require('./config/adminAuth');
 
 const app = express();
 
 // Initialization
 fs.rmSync('./tmp/uploads', { recursive: true, force: true })
 fs.mkdirSync('./tmp/uploads')
+
+// Validate admin security configuration
+validateAdminSecurity();
 
 // Rate Limiting
 const limiter = rateLimit({

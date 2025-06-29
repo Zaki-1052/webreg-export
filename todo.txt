@@ -1,5 +1,8 @@
 need to do:
 
+- implement summer session web support
+  - web scraping and parse in fetcher
+
 double upload photo bug
 ui update on drag and drop
 
